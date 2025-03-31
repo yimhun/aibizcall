@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI비즈콜 설치 안내</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      color: #333;
+    }
+
+    header {
+      background-color: #fff;
+      padding: 24px 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 12px;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      background-color: #e6007e;
+      color: #fff;
+      border: none;
+      border-radius: 24px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #c40065;
+    }
+
+    .hero {
+      padding: 60px 20px;
+      text-align: center;
+      background: linear-gradient(to right, #fef6fa, #fff);
+    }
+
+    .hero h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #111;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #555;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .modal-content {
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 16px;
+      width: 90%;
+      max-width: 800px;
+      position: relative;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .close {
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      font-size: 28px;
+      cursor: pointer;
+      color: #999;
+    }
+
+    .close:hover {
+      color: #555;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 24px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="button-group">
+      <button class="btn" onclick="openModal('usageModal')">AI비즈콜 이용 방법</button>
+      <button class="btn" onclick="openModal('installModal')">AI비즈콜 설치 방법</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>AI비즈콜, 스마트한 업무 전화의 시작</h1>
+    <p>간편한 설치와 쉬운 사용법으로 비즈니스를 더 효율적으로!</p>
+  </section>
+
+  <!-- 이용 방법 모달 -->
+  <div id="usageModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('usageModal')">&times;</span>
+      <h2>AI비즈콜 이용 방법</h2>
+      <p>여기에 이용 방법 내용을 입력하세요.</p>
+    </div>
+  </div>
+
+  <!-- 설치 방법 모달 -->
+  <div id="installModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('installModal')">&times;</span>
+      <h2>AI비즈콜 설치 방법</h2>
+      <p>여기에 설치 방법 내용을 입력하세요.</p>
+    </div>
+  </div>
+
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = 'flex';
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+
+    window.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeModal('usageModal');
+        closeModal('installModal');
+      }
+    });
+  </script>
+</body>
+</html>
