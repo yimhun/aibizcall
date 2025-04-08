@@ -23,7 +23,7 @@
 
     <!-- 메인 섹션 -->
     <section class="hero" id="home">
-        <img src="image1.jpg" alt="메인 비주얼" class="hero-image">
+        <img src="001.png" alt="메인 비주얼" class="hero-image">
         <div class="hero-content">
             <h2>당신의 비즈니스를 위한 최적의 솔루션</h2>
             <p>효율적이고 혁신적인 서비스로 성공을 이끌어드립니다.</p>
@@ -36,37 +36,37 @@
         <h2>우리의 서비스</h2>
         <div class="service-container">
             <div class="service-item">
-                <img src="image2.jpg" alt="서비스 1">
+                <img src="002.png" alt="서비스 1">
                 <h3>서비스 1</h3>
                 <p>비즈니스 효율성을 높이는 솔루션.</p>
                 <a href="#contact"><button>자세히 보기</button></a>
             </div>
             <div class="service-item">
-                <img src="image3.jpg" alt="서비스 2">
+                <img src="003.png" alt="서비스 2">
                 <h3>서비스 2</h3>
                 <p>최신 기술로 혁신을 경험하세요.</p>
                 <a href="#contact"><button>자세히 보기</button></a>
             </div>
             <div class="service-item">
-                <img src="image4.jpg" alt="서비스 3">
+                <img src="004.png" alt="서비스 3">
                 <h3>서비스 3</h3>
                 <p>안정적이고 빠른 서비스 제공.</p>
                 <a href="#contact"><button>자세히 보기</button></a>
             </div>
             <div class="service-item">
-                <img src="image5.jpg" alt="서비스 4">
+                <img src="005.png" alt="서비스 4">
                 <h3>서비스 4</h3>
                 <p>맞춤형 솔루션으로 경쟁력 강화.</p>
                 <a href="#contact"><button>자세히 보기</button></a>
             </div>
             <div class="service-item">
-                <img src="image6.jpg" alt="서비스 5">
+                <img src="006.png" alt="서비스 5">
                 <h3>서비스 5</h3>
                 <p>고객 중심의 지원 서비스.</p>
                 <a href="#contact"><button>자세히 보기</button></a>
             </div>
             <div class="service-item">
-                <img src="image7.jpg" alt="서비스 6">
+                <img src="007.png" alt="서비스 6">
                 <h3>서비스 6</h3>
                 <p>비즈니스 성장을 위한 파트너.</p>
                 <a href="#contact"><button>자세히 보기</button></a>
@@ -77,7 +77,7 @@
     <!-- 푸터 -->
     <footer id="contact">
         <div class="footer-container">
-            <p>&copy; 2025 MyBiz. All rights reserved.</p>
+            <p>© 2025 MyBiz. All rights reserved.</p>
             <p>문의: contact@mybiz.com | 전화: 123-456-7890</p>
         </div>
     </footer>
