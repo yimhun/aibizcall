@@ -20,7 +20,7 @@
     header {
       background-color: #e6007e;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      padding: 1.5rem 2rem;
+      padding: 2rem 2rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -30,7 +30,7 @@
       flex-wrap: wrap;
     }
     .logo {
-      font-size: 2rem;
+      font-size: 2.2rem;
       font-weight: bold;
       color: #fff;
     }
@@ -39,25 +39,26 @@
       text-decoration: none;
       color: #fff;
       font-weight: 600;
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       transition: color 0.3s;
     }
     nav a:hover {
       color: #ffd600;
     }
     section {
-      padding: 80px 20px;
+      padding: 60px 20px;
       text-align: center;
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
       opacity: 0;
       transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
     }
     section.visible {
       opacity: 1;
       transform: translateY(0);
     }
     section img {
-      max-width: 100%;
+      width: 80%;
+      max-width: 800px;
       height: auto;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -89,12 +90,12 @@
       background-color: #c4006f;
     }
     .floating-buttons img {
-      width: 30px;
-      height: 30px;
+      width: 28px;
+      height: 28px;
     }
     .floating-buttons .label {
       position: absolute;
-      top: 70px;
+      top: 65px;
       background: #333;
       color: #fff;
       padding: 4px 10px;
@@ -120,12 +121,12 @@
       transform: translateY(0);
     }
     .top-button {
-      width: 60px;
-      height: 60px;
+      width: 50px;
+      height: 50px;
       background-color: #222;
       color: white;
       font-weight: bold;
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -137,14 +138,14 @@
       background-color: #333;
       color: #fff;
       text-align: center;
-      padding: 30px 10px;
-      font-size: 0.9rem;
+      padding: 40px 20px;
+      font-size: 1.1rem;
     }
     @media (max-width: 768px) {
       header {
         flex-direction: column;
         align-items: flex-start;
-        padding: 1rem;
+        padding: 1.2rem;
       }
       nav {
         margin-top: 10px;
@@ -153,11 +154,14 @@
         gap: 10px;
       }
       nav a {
-        font-size: 1rem;
+        font-size: 1.2rem;
         margin-left: 0;
       }
       .logo {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
+      }
+      section img {
+        width: 95%;
       }
     }
   </style>
@@ -214,16 +218,18 @@
   </footer>
 
   <script>
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1 });
+    document.addEventListener("DOMContentLoaded", function () {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
 
-    document.querySelectorAll('section').forEach(section => {
-      observer.observe(section);
+      document.querySelectorAll('section').forEach(section => {
+        observer.observe(section);
+      });
     });
   </script>
 </body>
